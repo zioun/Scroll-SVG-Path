@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .fixed-svg {
+    position: fixed; /* Fix the SVG position */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10; /* Keep it above other content */
+    pointer-events: none; /* Prevent SVG from blocking interaction with other elements */
+  }
+  
+  .scroll-content {
+    margin-top: 100vh; /* Start scrolling content after SVG */
+  }
+  
