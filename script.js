@@ -12,6 +12,10 @@ const pathElementHy = document.querySelector("#Hy path");
 const pathElementIx = document.querySelector("#Ix path");
 const pathElementJx = document.querySelector("#Jx path");
 const pathElementKx = document.querySelector("#Kx path");
+const pathElementLx = document.querySelector("#Lx path");
+const pathElementMx = document.querySelector("#Mx path");
+const pathElementNx = document.querySelector("#Nx path");
+const pathElementOx = document.querySelector("#Ox path");
 
 // Path data for different scroll positions
 const defaultPath =
@@ -154,6 +158,24 @@ const replacedPathK1 = " M833.6179809570312,265.2869873046875 C834.7860107421875
 const replacedPathK2 = " M415.0159912109375,296.1409912109375 C442.0119934082031,298.9750061035156 466.3479919433594,303.3479919433594 481.5,306 C501.5,309.5 503,316 554,312.5 C605,309 826.5,276.5 836,263.5 C845.5,250.5 847,235 857.5,223.5 C868,212 890.5,186.5 890.5,186.5";
 const replacedPathK3 = " M171.625,154.125 C171.625,154.125 163.5,253.5 201,269.5 C238.5,285.5 351.5,292 388.5,294 C425.5,296 461.5,302.5 481.5,306 C501.5,309.5 503,316 554,312.5 C605,309 826.5,276.5 836,263.5 C845.5,250.5 847,235 857.5,223.5 C868,212 890.5,186.5 890.5,186.5";
 
+const replacedPathL0 = "M0 0";
+const replacedPathL1 = " M812,140 C803.2150268554688,141.85800170898438 697.7429809570312,157.64300537109375 617.458984375,168.1479949951172";
+const replacedPathL2 = " M812,140 C799,142.75 574.25,176 532.75,177.5 C491.25,179 510.25,210.25 518.25,233.5 C526.25,256.75 532,280 571.5,285.25 C611,290.5 750,260.25 785.75,251.5 C806.2260131835938,246.48800659179688 814.9739990234375,230.56900024414062 819.697998046875,211.82200622558594";
+const replacedPathL3 = " M812,140 C799,142.75 574.25,176 532.75,177.5 C491.25,179 510.25,210.25 518.25,233.5 C526.25,256.75 532,280 571.5,285.25 C611,290.5 750,260.25 785.75,251.5 C821.5,242.75 821.5,200.75 826.75,168.5 C832,136.25 825,137.25 812,140z";
+
+const replacedPathM0 = "M0 0";
+const replacedPathM1 = " M813.5,139.5 C813.5,139.5 810.25,217 779.75,232.75 C770.760009765625,237.39300537109375 750.9959716796875,243.79400634765625 726.0349731445312,250.10499572753906";
+const replacedPathM2 = " M813.5,139.5 C813.5,139.5 810.25,217 779.75,232.75 C749.25,248.5 594.75,284.5 534,268.5";
+
+const replacedPathN0 = "M0 0";
+const replacedPathN1 = "  M411,144.5 C411,144.5 424.5,229.25 432.25,239 C440,248.75 473.25,270.25 487.75,273.25 C502.25,276.25 511.25,278.75 495.25,234.25 C491.7179870605469,224.427001953125 488.1619873046875,214.06900024414062 484.5119934082031,203.88900756835938";
+const replacedPathN2 = "  M411,144.5 C411,144.5 424.5,229.25 432.25,239 C440,248.75 473.25,270.25 487.75,273.25 C502.25,276.25 511.25,278.75 495.25,234.25 C479.25,189.75 462.75,134.25 439.25,134.25 C415.75,134.25 402.375,134.125 402.375,134.125";
+
+const replacedPathO0 = "M0 0";
+const replacedPathO1 = "   M411.25,146 C417.25,142.75 438,140.25 449,166 C455.7250061035156,181.7429962158203 466.989990234375,205.9040069580078 474.04400634765625,226.44700622558594";
+const replacedPathO2 = "   M411.25,146 C417.25,142.75 438,140.25 449,166 C464.2799987792969,201.77000427246094 503,281 462.5,262.5";
+
+
 // Update path on scroll
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
@@ -199,11 +221,13 @@ window.addEventListener("scroll", () => {
     pathElementAx.setAttribute("d", replacedPathA12);
     pathElementDx.setAttribute("d", replacedPathD1);
     pathElementKx.setAttribute("d", replacedPathK2);
+    pathElementLx.setAttribute("d", replacedPathL0);
   } else if (scrollPosition >= 1300 && scrollPosition < 1400) {
     pathElementAx.setAttribute("d", replacedPathA13);
     pathElementDx.setAttribute("d", replacedPathD2);
     pathElementHx.setAttribute("d", replacedPathH0);
     pathElementKx.setAttribute("d", replacedPathK3);
+    pathElementLx.setAttribute("d", replacedPathL1);
   } else if (scrollPosition >= 1400 && scrollPosition < 1500) {
     pathElementAx.setAttribute("d", replacedPathA14);
     pathElementCx.setAttribute("d", replacedPathC0);
@@ -211,6 +235,9 @@ window.addEventListener("scroll", () => {
     pathElementEx.setAttribute("d", replacedPathE0);
     pathElementEy.setAttribute("d", replacedPathE00);
     pathElementHx.setAttribute("d", replacedPathH1);
+    pathElementLx.setAttribute("d", replacedPathL2);
+    pathElementMx.setAttribute("d", replacedPathM0);
+    pathElementNx.setAttribute("d", replacedPathN0);
   } else if (scrollPosition >= 1500 && scrollPosition < 1600) {
     pathElementAx.setAttribute("d", replacedPathA15);
     pathElementCx.setAttribute("d", replacedPathC1);
@@ -220,6 +247,10 @@ window.addEventListener("scroll", () => {
     pathElementHx.setAttribute("d", replacedPathH2);
     pathElementHy.setAttribute("d", replacedPathH00);
     pathElementIx.setAttribute("d", replacedPathI0);
+    pathElementLx.setAttribute("d", replacedPathL3);
+    pathElementMx.setAttribute("d", replacedPathM1);
+    pathElementNx.setAttribute("d", replacedPathN1);
+    pathElementOx.setAttribute("d", replacedPathO0);
   } else if (scrollPosition >= 1600 && scrollPosition < 1700) {
     pathElementAx.setAttribute("d", replacedPathA16);
     pathElementCx.setAttribute("d", replacedPathC2);
@@ -231,6 +262,9 @@ window.addEventListener("scroll", () => {
     pathElementHx.setAttribute("d", replacedPathH3);
     pathElementHy.setAttribute("d", replacedPathH11);
     pathElementIx.setAttribute("d", replacedPathI1);
+    pathElementMx.setAttribute("d", replacedPathM2);
+    pathElementNx.setAttribute("d", replacedPathN2);
+    pathElementOx.setAttribute("d", replacedPathO1);
   } else if (scrollPosition >= 1700 && scrollPosition < 1800) {
     pathElementAx.setAttribute("d", replacedPathA17);
     pathElementCx.setAttribute("d", replacedPathC3);
@@ -239,6 +273,7 @@ window.addEventListener("scroll", () => {
     pathElementFx.setAttribute("d", replacedPathF1);
     pathElementGx.setAttribute("d", replacedPathG1);
     pathElementIx.setAttribute("d", replacedPathI2);
+    pathElementOx.setAttribute("d", replacedPathO2);
   } else if (scrollPosition >= 1800 && scrollPosition < 1900) {
     pathElementAx.setAttribute("d", replacedPathA18);
     pathElementCx.setAttribute("d", replacedPathC4);
