@@ -16,6 +16,10 @@ const pathElementLx = document.querySelector("#Lx path");
 const pathElementMx = document.querySelector("#Mx path");
 const pathElementNx = document.querySelector("#Nx path");
 const pathElementOx = document.querySelector("#Ox path");
+const pathElementPx = document.querySelector("#Px path");
+const pathElementPy = document.querySelector("#Py path");
+const pathElementPz = document.querySelector("#Pz path");
+const pathElementPxx = document.querySelector("#Pxx path");
 
 // Path data for different scroll positions
 const defaultPath =
@@ -175,6 +179,30 @@ const replacedPathO0 = "M0 0";
 const replacedPathO1 = "   M411.25,146 C417.25,142.75 438,140.25 449,166 C455.7250061035156,181.7429962158203 466.989990234375,205.9040069580078 474.04400634765625,226.44700622558594";
 const replacedPathO2 = "   M411.25,146 C417.25,142.75 438,140.25 449,166 C464.2799987792969,201.77000427246094 503,281 462.5,262.5";
 
+const replacedPathP0 = "M0 0";
+const replacedPathP1 = "M-736.02197265625,-273.77099609375 C-721.7830200195312,-275.2130126953125 -709.5,-276.5 -709.5,-276.5";
+const replacedPathP2 = "M-826.2789916992188,-263.53900146484375 C-807.2160034179688,-266.218994140625 -783.5399780273438,-269.4330139160156 -775.75,-270 C-762,-271 -709.5,-276.5 -709.5,-276.5";
+const replacedPathP3 = " M-881.1589965820312,-282.1289978027344 C-882.5679931640625,-273.91400146484375 -882.4400024414062,-262.6659851074219 -881.25,-258.5 C-879.25,-251.5 -852.75,-250 -852.75,-250 C-852.75,-250 -852.75,-259.75 -852.75,-259.75 C-852.75,-259.75 -789.5,-269 -775.75,-270 C-762,-271 -709.5,-276.5 -709.5,-276.5";
+const replacedPathP4 = " M-852.25,-259.75 C-852.25,-262.5 -852.25,-269.5 -852.25,-275 C-852.25,-280.0989990234375 -869.75,-290.5 -876,-291.5 C-882.25,-292.5 -883.25,-265.5 -881.25,-258.5 C-879.25,-251.5 -852.75,-250 -852.75,-250 C-852.75,-250 -852.75,-259.75 -852.75,-259.75 C-852.75,-259.75 -789.5,-269 -775.75,-270 C-762,-271 -709.5,-276.5 -709.5,-276.5";
+
+const replacedPathP00 = "M0 0";
+const replacedPathP11 = " M-839.5360107421875,-286.3290100097656 C-850.239013671875,-285.0580139160156 -857.9320068359375,-283.90899658203125 -860.75,-283";
+const replacedPathP22 = " M-778.302001953125,-292.39599609375 C-816.7969970703125,-288.98199462890625 -853.7620239257812,-285.2539978027344 -860.75,-283";
+const replacedPathP33 = " M-717.0189819335938,-297.5379943847656 C-765.7969970703125,-293.635009765625 -849.8359985351562,-286.52099609375 -860.75,-283";
+const replacedPathP44 = " M-682.25,-300.25 C-682.25,-300.25 -845.25,-288 -860.75,-283";
+
+const replacedPathP000 = "M0 0";
+const replacedPathP111 = " M-801.541015625,-256.38800048828125 C-801.9840087890625,-259.7820129394531 -802.1680297851562,-263.1789855957031 -802,-266.5";
+const replacedPathP222 = " M-796.7570190429688,-237.44400024414062 C-799.9849853515625,-246.447998046875 -802.489990234375,-256.79998779296875 -802,-266.5";
+const replacedPathP333 = " M-788.8369750976562,-219.54600524902344 C-794.1160278320312,-229.5919952392578 -802.8790283203125,-249.0970001220703 -802,-266.5";
+const replacedPathP444 = " M-785,-212.75 C-785,-212.75 -803.25,-241.75 -802,-266.5";
+
+const replacedPathP0000 = "M0 0";
+const replacedPathP1111 = " M-773.5880126953125,-264.9639892578125 C-776.072998046875,-268.2699890136719 -777.75,-270.5 -777.75,-270.5";
+const replacedPathP2222 = " M-765.0150146484375,-253.56199645996094 C-771.3419799804688,-261.9779968261719 -777.75,-270.5 -777.75,-270.5";
+const replacedPathP3333 = " M-756.4420166015625,-242.16099548339844 C-763.3980102539062,-251.41200256347656 -777.75,-270.5 -777.75,-270.5";
+const replacedPathP4444 = " M-752.75,-237.25 C-752.75,-237.25 -777.75,-270.5 -777.75,-270.5";
+
 
 // Update path on scroll
 window.addEventListener("scroll", () => {
@@ -292,5 +320,36 @@ window.addEventListener("scroll", () => {
     pathElementAx.setAttribute("d", replacedPathA23);
   } else if (scrollPosition >= 2400 && scrollPosition < 2500) {
     pathElementAx.setAttribute("d", replacedPathA24);
+    pathElementPx.setAttribute("d", replacedPathP0);
+    pathElementPy.setAttribute("d", replacedPathP00);
+    pathElementPz.setAttribute("d", replacedPathP000);
+    pathElementPxx.setAttribute("d", replacedPathP0000);
   }
+  else if (scrollPosition >= 2500 && scrollPosition < 2600) {
+    pathElementAx.setAttribute("d", replacedPathA24);
+    pathElementPx.setAttribute("d", replacedPathP1);
+    pathElementPy.setAttribute("d", replacedPathP11);
+    pathElementPz.setAttribute("d", replacedPathP111);
+    pathElementPxx.setAttribute("d", replacedPathP1111);
+  }
+  else if (scrollPosition >= 2600 && scrollPosition < 2700) {
+    pathElementAx.setAttribute("d", replacedPathA24);
+    pathElementPx.setAttribute("d", replacedPathP2);
+    pathElementPy.setAttribute("d", replacedPathP22);
+    pathElementPz.setAttribute("d", replacedPathP222);
+    pathElementPxx.setAttribute("d", replacedPathP2222);
+  }
+  else if (scrollPosition >= 2700 && scrollPosition < 2800) {
+    pathElementPx.setAttribute("d", replacedPathP3);
+    pathElementPy.setAttribute("d", replacedPathP33);
+    pathElementPz.setAttribute("d", replacedPathP333);
+    pathElementPxx.setAttribute("d", replacedPathP3333);
+  }
+  else if (scrollPosition >= 2800 && scrollPosition < 2900) {
+    pathElementPx.setAttribute("d", replacedPathP4);
+    pathElementPy.setAttribute("d", replacedPathP44);
+    pathElementPz.setAttribute("d", replacedPathP444);
+    pathElementPxx.setAttribute("d", replacedPathP4444);
+  }
+  
 });
