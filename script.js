@@ -33,6 +33,8 @@ const pathElementWy = document.querySelector("#Wy path");
 const pathElementXx = document.querySelector("#Xx path");
 const pathElementYx = document.querySelector("#Yx path");
 const pathElementZx = document.querySelector("#Zx path");
+const pathElementAAx = document.querySelector("#AAx path");
+const pathElementABx = document.querySelector("#ABx path");
 
 // Path data for different scroll positions
 const defaultPath =
@@ -343,6 +345,22 @@ const replacedPathZ2 =
 const replacedPathZ3 =
   "      M0,-125.39649963378906 C22.412384033203125,-125.39649963378906 40.609500885009766,-69.20632934570312 40.609500885009766,0 C40.609500885009766,69.20632934570312 22.412384033203125,125.39649963378906 0,125.39649963378906 C-22.412384033203125,125.39649963378906 -40.609500885009766,69.20632934570312 -40.609500885009766,0 C-40.609500885009766,-69.20632934570312 -22.412384033203125,-125.39649963378906 0,-125.39649963378906z";
 
+const replacedPathAA0 = "M0 0";
+const replacedPathAA1 =
+  "     M-182.5,-67 C-182.5,-67 -307.32598876953125,-98.27400207519531 -330.1570129394531,60.48500061035156";
+const replacedPathAA2 =
+  "      M-182.5,-67 C-182.5,-67 -345.8420104980469,-107.92400360107422 -333,141.5 C-326.3080139160156,271.47900390625 -290.65399169921875,326.3680114746094 -251.0540008544922,350.1180114746094";
+const replacedPathAA3 =
+  "       M-182.5,-67 C-182.5,-67 -345.8420104980469,-107.92400360107422 -333,141.5 C-322.3599853515625,348.1650085449219 -238.5,365 -181.98199462890625,368.6619873046875 C-174.5279998779297,369.1449890136719 -33,336 -33,336";
+
+const replacedPathAB0 = "M0 0";
+const replacedPathAB1 =
+  "      M0,-187.6875 C53.10519790649414,-187.6875 96.22250366210938,-103.58473205566406 96.22250366210938,0 C96.2229995727539,0.6110000014305115 96.22100067138672,1.2209999561309814 96.21800231933594,1.8309999704360962";
+const replacedPathAB2 =
+  "      M0,-187.6875 C53.10519790649414,-187.6875 96.22250366210938,-103.58473205566406 96.22250366210938,0 C96.22250366210938,103.58473205566406 53.10519790649414,187.6875 0,187.6875 C-46.694000244140625,187.68800354003906 -85.66600036621094,122.66500091552734 -94.39600372314453,36.54999923706055";
+const replacedPathAB3 =
+  "        M0,-187.6875 C53.10519790649414,-187.6875 96.22250366210938,-103.58473205566406 96.22250366210938,0 C96.22250366210938,103.58473205566406 53.10519790649414,187.6875 0,187.6875 C-53.10519790649414,187.6875 -96.22250366210938,103.58473205566406 -96.22250366210938,0 C-96.22250366210938,-103.58473205566406 -53.10519790649414,-187.6875 0,-187.6875z";
+
 // Update path on scroll
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
@@ -370,16 +388,19 @@ window.addEventListener("scroll", () => {
     pathElementBx.setAttribute("d", replacedPathB0); //Bx
     pathElementJx.setAttribute("d", replacedPathJ1);
     pathElementYx.setAttribute("d", replacedPathY3);
+    pathElementAAx.setAttribute("d", replacedPathAA0);
   } else if (scrollPosition >= 800 && scrollPosition < 900) {
     pathElementAx.setAttribute("d", replacedPathA8);
     pathElementBx.setAttribute("d", replacedPathB1); //Bx
     pathElementJx.setAttribute("d", replacedPathJ2);
     pathElementYx.setAttribute("d", replacedPathY4);
+    pathElementAAx.setAttribute("d", replacedPathAA1);
   } else if (scrollPosition >= 900 && scrollPosition < 1000) {
     pathElementAx.setAttribute("d", replacedPathA9);
     pathElementBx.setAttribute("d", replacedPathB2); //Bx
     pathElementJx.setAttribute("d", replacedPathJ3);
     pathElementYx.setAttribute("d", replacedPathY5);
+    pathElementAAx.setAttribute("d", replacedPathAA2);
   } else if (scrollPosition >= 1000 && scrollPosition < 1100) {
     pathElementAx.setAttribute("d", replacedPathA10);
     pathElementBx.setAttribute("d", replacedPathB3); //Bx
@@ -387,12 +408,15 @@ window.addEventListener("scroll", () => {
     pathElementKx.setAttribute("d", replacedPathK0);
     pathElementYx.setAttribute("d", replacedPathY6);
     pathElementZx.setAttribute("d", replacedPathZ0);
+    pathElementAAx.setAttribute("d", replacedPathAA3);
+    pathElementABx.setAttribute("d", replacedPathAB0);
   } else if (scrollPosition >= 1100 && scrollPosition < 1200) {
     pathElementAx.setAttribute("d", replacedPathA11);
     pathElementDx.setAttribute("d", replacedPathD0);
     pathElementJx.setAttribute("d", replacedPathJ5);
     pathElementKx.setAttribute("d", replacedPathK1);
     pathElementZx.setAttribute("d", replacedPathZ1);
+    pathElementABx.setAttribute("d", replacedPathAB1);
   } else if (scrollPosition >= 1200 && scrollPosition < 1300) {
     pathElementAx.setAttribute("d", replacedPathA12);
     pathElementDx.setAttribute("d", replacedPathD1);
@@ -402,6 +426,7 @@ window.addEventListener("scroll", () => {
     pathElementVx.setAttribute("d", replacedPathV0);
     pathElementVy.setAttribute("d", replacedPathV00);
     pathElementZx.setAttribute("d", replacedPathZ2);
+    pathElementABx.setAttribute("d", replacedPathAB2);
   } else if (scrollPosition >= 1300 && scrollPosition < 1400) {
     pathElementAx.setAttribute("d", replacedPathA13);
     pathElementDx.setAttribute("d", replacedPathD2);
@@ -413,6 +438,7 @@ window.addEventListener("scroll", () => {
     pathElementVx.setAttribute("d", replacedPathV1);
     pathElementVy.setAttribute("d", replacedPathV11);
     pathElementZx.setAttribute("d", replacedPathZ3);
+    pathElementABx.setAttribute("d", replacedPathAB3);
   } else if (scrollPosition >= 1400 && scrollPosition < 1500) {
     pathElementAx.setAttribute("d", replacedPathA14);
     pathElementCx.setAttribute("d", replacedPathC0);
