@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-.fixed-svg {
+#fixed-banner {
   position: fixed;
 }
 
@@ -105,4 +105,5 @@ body {
   font-weight: normal;
   transition: opacity 0.5s ease; /* Smooth transition */
 }
+
 

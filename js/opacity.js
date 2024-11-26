@@ -36,3 +36,24 @@ window.addEventListener("scroll", () => {
     textPara.style.opacity = "0";
   }
 });
+
+const fixedBanner = document.querySelector("#fixed-banner");
+
+// Set the transition style once
+fixedBanner.style.transition = "margin-top 1s";
+
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition >= 3500) {
+    fixedBanner.style.marginTop = "-1400px"; // Smoothly move up
+  } else if (scrollPosition >= 3200) {
+    fixedBanner.style.marginTop = "-1000px"; // Smoothly move up
+  } else if (scrollPosition >= 2900) {
+    fixedBanner.style.marginTop = "-500px"; // Smoothly move up
+  } else if (scrollPosition >= 2700) {
+    fixedBanner.style.marginTop = "-300px"; // Smoothly move up
+  } else {
+    fixedBanner.style.marginTop = "0px"; // Smoothly reset
+  }
+});
