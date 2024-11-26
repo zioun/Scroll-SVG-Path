@@ -106,4 +106,60 @@ body {
   transition: opacity 0.5s ease; /* Smooth transition */
 }
 
+.layer-1, svg .layer-2, svg .layer-3 svg{
+  width: 2200px;
+  margin-left: -1150px;
+  margin-bottom: -200px !important;
+}
+
+/* 2nd section */
+
+
+#fixed-layers {
+  position: fixed;
+  bottom: -100%; /* Start off-screen */
+  width: 100%;
+  transition: bottom 0.2s ease-in-out; /* Smooth transition */
+}
+
+#fixed-layers.show {
+  bottom: 0%; /* Initial move into view */
+}
+
+#fixed-layers.stepOne {
+  bottom: 5%; /* Move further */
+}
+
+#fixed-layers.stepTwo {
+  bottom: 15%; /* Final position */
+}
+
+#fixed-layers.stepThree {
+  bottom: 25%; /* Final position */
+}
+
+#fixed-layers.stepFour {
+  bottom: 35%; /* Final position */
+}
+
+
+/* layer-1-left */
+
+.layer-1-left{
+  position: relative;
+}
+.layer-1-left .layer-1-left-text-area{
+  margin-left: 1300px;
+  position: absolute;
+  top: 20%;
+}
+
+.layer-1-left .layer-1-left-text-area h1{
+  color: white;
+  font-size: 80px;
+}
+.layer-1-left .layer-1-left-text-area img{
+  width: 300px;
+}
+
 
